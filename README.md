@@ -2,8 +2,8 @@
 
 1) Install maven
 
-2) Download Android SDK from here : 
-*Linux : http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz*
+2) Download Android SDK from here :  
+*Linux : http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz*  
 *MacOS : http://dl.google.com/android/android-sdk_r23.0.2-macosx.zip*
 
 3) Add environment variable :
@@ -28,21 +28,19 @@ git clone https://github.com/MartinBaptiste/Robolectric-V-V.git
 
 8) Change the version of android in pom.xml
 ```xml
-<dependency>
-     <groupId>android</groupId>
-     <artifactId>android</artifactId>
-     <version>4.3.1_r3</version>
-     <scope>provided</scope>
-</dependency>
+<plugin>
+     <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+     <artifactId>android-maven-plugin</artifactId>
+     <version>3.8.2</version>
+     <configuration>
+     <sdk>
+          <platform>18</platform>
+          <path>Your Andorid SDK path</path>
+     </sdk>
+     <undeployBeforeDeploy>true</undeployBeforeDeploy>
+     </configuration>
+     <extensions>true</extensions>
+</plugin>
 ```
 
-9) Add hamcrest core dependency
-```xml
-<dependency>
-     <groupId>org.hamcrest</groupId>
-     <artifactId>hamcrest-core</artifactId>
-     <version>1.3</version>
-</dependency>
-```
-
-10) Run test with maven, enjoy test
+9) Run test with maven, enjoy test
