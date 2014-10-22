@@ -26,7 +26,9 @@ git clone https://github.com/MartinBaptiste/Robolectric-V-V.git
 
 7) Open IntelliJ and open this project
 
-8) Change the version of android in pom.xml
+8) Change SDK compiler to Android SDK 18 or 19 "File -> Project Structure." and set "Project Setings -> Project -> Project SDK -> Edit"
+
+9) Change the version of android in pom.xml
 ```xml
 <plugin>
      <groupId>com.jayway.maven.plugins.android.generation2</groupId>
@@ -43,4 +45,4 @@ git clone https://github.com/MartinBaptiste/Robolectric-V-V.git
 </plugin>
 ```
 
-9) Run test with maven, enjoy test
+10) Run test with maven, enjoy test
