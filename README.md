@@ -35,7 +35,7 @@ git clone https://github.com/MartinBaptiste/Robolectric-V-V.git
      <configuration>
      <sdk>
           <platform>18</platform>
-          <path>Your Andorid SDK path</path>
+          <path>Your Android SDK path</path>
      </sdk>
      <undeployBeforeDeploy>true</undeployBeforeDeploy>
      </configuration>
