@@ -16,6 +16,10 @@ ANDROID_HOME="yourPATH"
 wget https://github.com/robolectric/deckard-maven/archive/master.zip
 unzip master.zip
 ```
+4-1) Add link files to android
+```bash
+sudo ln -s YourAndroidSDKPath/tools/android /bin/android
+```
 
 5) Run setup.sh
 
