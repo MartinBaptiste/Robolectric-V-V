@@ -1,0 +1,7 @@
+int id button 0x7f030003
+int id error 0x7f030004
+int id hello 0x7f030000
+int id login 0x7f030001
+int id password 0x7f030002
+int layout hello 0x7f020000
+int layout main 0x7f020001
