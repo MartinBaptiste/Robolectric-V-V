@@ -5,15 +5,12 @@ import android.content.Intent;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.example.R;
-import org.hamcrest.CoreMatchers;
-import org.junit.Assert;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertTrue;
+
 
 @RunWith(RobolectricTestRunner.class)
 public class MainActivityTest {
@@ -54,7 +51,9 @@ public class MainActivityTest {
 
     @org.junit.Test
     public void loginSuccess() {
-        Activity activity = Robolectric.setupActivity(MainActivity.class);
+        //Activity activity = Robolectric.setupActivity(MainActivity.class);
+        MainActivity activity = Robolectric.buildActivity(MainActivity.class)
+                .create().get();
         ((EditText)activity.findViewById(R.id.login)).setText("toto");
         ((EditText)activity.findViewById(R.id.password)).setText("toto");
         activity.findViewById(R.id.button).performClick();
@@ -63,8 +62,8 @@ public class MainActivityTest {
 
         Intent i = new Intent(activity, HelloActivity.class);
         i.putExtra(MainActivity.EXTRA_LOGIN, "toto");
-        assertThat(Robolectric.shadowOf(activity).getNextStartedActivity(),
-                CoreMatchers.is(i));
+        Intent i2 = Robolectric.shadowOf(activity).peekNextStartedActivity();
+        assertTrue(i2.equals(i));
 
         Activity activity2 = Robolectric.buildActivity(HelloActivity.class).
                 withIntent(i).create().get();
