@@ -30,7 +30,7 @@ git clone https://github.com/MartinBaptiste/Robolectric-V-V.git
 
 7) Run IntelliJ and open this project
 
-8) Change SDK compiler to Android SDK 18 (4.3.1) or 19 (4.4.2) "File -> Project Structure." and set "Project Settings -> Project -> Project SDK -> Edit"
+8) Change SDK compiler to Android SDK 18 (4.3.1) "File -> Project Structure." and set "Project Settings -> Project -> Project SDK -> Edit"
 
 9) Change the version of android in pom.xml if needed
 ```xml
