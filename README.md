@@ -18,7 +18,7 @@ unzip master.zip
 ```
 4-1) Create a symbolic link to android executable
 ```bash
-sudo ln -s YourAndroidSDKPath/tools/android /bin/android
+sudo ln -s $ANDROID_HOME/tools/android /bin/android
 ```
 
 5) Run setup.sh
